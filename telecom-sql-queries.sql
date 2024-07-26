@@ -1,4 +1,4 @@
-sSELECT Gender, Count(Gender) as TotalCount,
+SELECT Gender, Count(Gender) as TotalCount,
 Count(Gender) * 100.0 / (Select Count(*) from db_churn.dbo.stg_churn)  as Percentage
 from db_churn.dbo.stg_churn
 Group by Gender
